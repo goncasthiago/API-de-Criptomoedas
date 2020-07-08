@@ -1,0 +1,10 @@
+* {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#coins {
+	margin-left: 24px;
+}
+nav {
+	color: gray;
+	margin-bottom: 16px;
+}
