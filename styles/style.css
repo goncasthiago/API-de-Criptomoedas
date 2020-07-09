@@ -1,5 +1,6 @@
 * {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	box-sizing: border-box;
 }
 #coins {
 	margin-left: 24px;
@@ -7,4 +8,25 @@
 nav {
 	color: gray;
 	margin-bottom: 16px;
+}
+.card-coin {
+	background-color: rgba(196, 196, 196, 0.863);
+	padding: 8px;
+	margin: 8px;
+	border-style: outset;
+	border-radius: 16px;
+}
+
+.titulo {
+	display: flex;
+}
+
+img {
+	border-radius: 8px;
+}
+
+.coin-name {
+	padding-left: 8px;
+	text-align: center;
+	align-items: center;
 }

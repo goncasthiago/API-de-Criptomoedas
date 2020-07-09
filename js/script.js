@@ -9,21 +9,25 @@ fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY='
 	})
 	.then((api) => {
 		var texto = '';
+		texto = texto + `<div class="row">`;
 		for (let i = 0; i < 10; i++) {
 			console.log(api);
+
 			texto =
 				texto +
 				`
-            <div class="media container-md">
-                <img src="./img/coin.png" class='align-self-center mr-3' alt='coin' width='100' height='60'>
-                    <div class='media-body container-md'>
-                    <h5 class="mt-2">${api.data[i].name}</h5>
-                    <p>${api.data[i].symbol} - since: ${api.data[i].first_historical_data}</p>
+                    <div class="col-md-4 card-coin">
+                        <div class="titulo">
+                            <img src="./img/coin.png"  alt='coin' width='100' height='60'>
+                            <h5 class="mt-2 coin-name">${api.data[i].name}</h5>
+                        </div>
+                        <p>${api.data[i].symbol} - since: ${api.data[i].first_historical_data}</p>
+
                     </div>
-            </div>
-            `;
-			document.getElementById('coins').innerHTML = texto;
+                `;
 		}
+		texto = texto + `</div>`;
+		document.getElementById('coins').innerHTML = texto;
 	})
 	.catch((error) => {
 		console.log(error.message);
